@@ -1,11 +1,12 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Img from "../imgs/wallpaperFirst.jpg"
 const Login = () => {
+  const [role,setRole]= useState('student');
   return (
     
     <>
     <form className='Login_main_class position-relative' style={{height:"100vh",width:"100%"}}>
-<img src={Img} className='img_class img-fluid' style={{height:"100vh",width:"100%"}}/>
+<img alt='hello' src={Img} className='img_class img-fluid' style={{height:"100vh",width:"100%"}}/>
 <div className='position-absolute  d-flex flex-column top-0' style={{height:"100%",width:"100%",display:"flex", alignItems:"center",borderRadius:"9px"}}>
 <div className='position-relative ' style={{backgroundColor:"#f5f2f5",top:"100px", height:"58%", width:"50%",minWidth:"310px",maxWidth:"600px",padding:"15px"}}>
   <h2 style={{width:"100%",textAlign:"center",fontSize:"22.4px",color:"#2b2b2b",fontWeight:"500"}}>Learn from India's best teachers</h2>
@@ -33,17 +34,18 @@ const Login = () => {
   }}></div>
 </div>
 
-<div className="d-flex justify-content-between align-items-center row">
+<div className="d-flex justify-content-between align-items-center row mb-3">
   <div className='d-flex justify-content-center align-items-center col-6' style={{ position: "relative" }}>
     <input
       type="radio"
       value="student"
       id="ft_student"
       name="role"
-      className="radio_input"
+      checked={role === "student"}
+      className="radio_input d-none"
       style={{ opacity: 0, position: "absolute" }}
     />
-    <label htmlFor="ft_student" className="cr role_label">
+    <label onClick={() => setRole("student")} htmlFor="ft_student" className="cr role_label">
       Student
     </label>
   </div>
@@ -54,10 +56,11 @@ const Login = () => {
       value="teacher"
       id="ft_teacher"
       name="role"
-      className="radio_input"
+      checked={role === "teacher"}
+      className="radio_input d-none"
       style={{ opacity: 0, position: "absolute" }}
     />
-    <label htmlFor="ft_teacher" className="cr role_label">
+    <label onClick={() => setRole("teacher")} htmlFor="ft_teacher" className="cr role_label">
       Teacher
     </label>
   </div>
@@ -85,7 +88,83 @@ const Login = () => {
     backgroundColor: "rgba(112,112,112,0.1)"
   }}></div>
 </div>
+<div className='bg-red  mt-3  m-2 container-fluid' style={{bottom:"0"}}>
+{ role === "student" ? (<div className='d-flex flex-column gap-3'> <input
+        type="text"
+        name="childName"
+        className="form-control mb-2"
+        placeholder="Enter Your Name"
+        />
+ <input
+        type="text"
+        name="childName"
+        className="form-control mb-2"
+        placeholder="Enter Class"
+        />
+      <div className="input-group mb-2">
+        <input
+          type="tel"
+          name="mobile"
+          className="form-control"
+          placeholder="Enter your Mobile Number"
+          />
+        <button
+          className="btn btn-info"
+          type="button"
+        >
+          Send OTP
+        </button>
+      </div>
 
+      <input
+        type="email"
+        name="email"
+        className="form-control mb-2"
+        placeholder="Email Address"
+        /></div>):null}
+        {role==="teacher"? ( <div className='d-flex flex-column gap-3'> <input
+        type="text"
+        name="fullName"
+        className="form-control mb-2"
+        placeholder="Enter Full Name"
+        />
+      <input
+        type="text"
+        name="subject"
+        className="form-control mb-2"
+        placeholder="Subject or Expertise"
+        />
+        <input
+        type="text"
+        name="subject"
+        className="form-control mb-2"
+        placeholder="Qualification"
+        />
+      <div className="input-group mb-2">
+        <input
+          type="tel"
+          name="mobile"
+          className="form-control"
+          placeholder="Mobile Number"
+          />
+        <button
+          className="btn btn-info"
+          type="button"
+         >
+          Send OTP
+        </button>
+      </div>
+      <input
+        type="email"
+        name="email"
+        className="form-control mb-4"
+        placeholder="Email Address"
+        />
+
+      <hr />
+
+       </div>):null }
+       </div>
 </div></div>
     </form>
     </>
