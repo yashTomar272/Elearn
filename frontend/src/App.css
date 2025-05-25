@@ -61,6 +61,6 @@
 
 /* ✅ Jab input selected ho to uska label red ho */
 input[type="radio"]:checked + label {
-  border-color: red;
+  border-color: rgb(255, 52, 204);
 }
 
