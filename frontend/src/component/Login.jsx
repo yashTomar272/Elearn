@@ -6,8 +6,9 @@ const Login = () => {
     <>
     <form className='Login_main_class position-relative' style={{height:"100vh",width:"100%"}}>
 <img src={Img} className='img_class img-fluid' style={{height:"100vh",width:"100%"}}/>
-<div className='position-absolute d-flex flex-column ' style={{height:"450px",width:"380px",padding:"15px",top:"50px",right:"50%",borderRadius:"9px",border:"1px solid black",backgroundColor:"#f5f2f5"}}>
-<h2 style={{fontSize:"22.4px",color:"#2b2b2b",fontWeight:"500"}}>Learn from India's best teachers</h2>
+<div className='position-absolute  d-flex flex-column ' style={{height:"100%",width:"100%",display:"flex", alignItems:"center",top:"100px",borderRadius:"9px"}}>
+<div className='position-relative ' style={{backgroundColor:"#f5f2f5", height:"58%", width:"50%",padding:"15px"}}>
+  <h2 style={{width:"100%",textAlign:"center",fontSize:"22.4px",color:"#2b2b2b",fontWeight:"500"}}>Learn from India's best teachers</h2>
 
 <div className='DALJU w-100 flex-row gap-1'>
 <div style={{width:"33%",height:"2px",backgroundColor:"rgba(112,112,112,0.1)"}}></div>
@@ -15,8 +16,8 @@ const Login = () => {
 <div style={{width:"33%",height:"2px",backgroundColor:"rgba(112,112,112,0.1)"}}></div>
 </div>
 
-<div className="d-flex justify-content-between align-items-center">
-  <div style={{ position: "relative" }}>
+<div className="d-flex justify-content-between align-items-center row">
+  <div className='d-flex justify-content-center align-items-center col' style={{ position: "relative" }}>
     <input
       type="radio"
       value="student"
@@ -30,7 +31,7 @@ const Login = () => {
     </label>
   </div>
 
-  <div style={{ position: "relative" }}>
+  <div className='col d-flex justify-content-center align-items-center' style={{ position: "relative" }}>
     <input
       type="radio"
       value="teacher"
@@ -51,7 +52,7 @@ const Login = () => {
 <div style={{width:"28%",height:"2px",backgroundColor:"rgba(112,112,112,0.1)"}}></div>
 </div>
 
-</div>
+</div></div>
     </form>
     </>
   )
