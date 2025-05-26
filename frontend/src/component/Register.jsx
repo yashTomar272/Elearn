@@ -32,8 +32,8 @@ useEffect(()=>{
   setValues({...values,[name]:value})
 }
 const submit = async () => {
-    console.log("click",values.role)
     try {
+      console.log(values)
       if (
         !values.fullname || 
         !values.email || 
@@ -51,7 +51,7 @@ const submit = async () => {
           console.log(response.data); // Assuming `values` contains your form data
       }
     } catch (error) {
-      console.log(error);
+      console.log("Error message from backend:",error.response.data.message);
     }
   };
   

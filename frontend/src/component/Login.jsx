@@ -38,7 +38,8 @@ const submit = async () => {
           console.log(response.data); // Assuming `values` contains your form data
       }
     } catch (error) {
-      console.log(error);
+           console.log("Error message from backend:",error.response.data.message);
+
     }
   };
   
