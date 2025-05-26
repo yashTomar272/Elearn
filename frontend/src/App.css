@@ -64,3 +64,29 @@ input[type="radio"]:checked + label {
   border-color: rgb(255, 52, 204);
 }
 
+/* SideTeacher */
+.li_color {
+  color: white;
+  font-size: 18px;
+  height: 35px;
+  width: 100%;
+  padding: 5px 0 5px 10px;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+   transition: all 0.3s ease;
+   cursor: pointer;
+}
+
+.li_color {
+  font-size: 20px;
+  color: white;
+  font-weight: 500;
+}
+
+.li_color:hover{
+  color: blue;
+  background: white;
+  .li_icon{
+    color: blue;
+  }
+}
