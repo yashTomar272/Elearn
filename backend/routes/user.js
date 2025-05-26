@@ -62,9 +62,9 @@ router.post("/signup", async (req, res) => {
 // sign-in
 router.post("/signin", async (req, res) => {
   try {
-    const { fullname, password } = req.body;
+    const { email, password } = req.body;
 
-    const existingUser = await User.findOne({ fullname });
+    const existingUser = await User.findOne({ email });
     if (!existingUser) {
       return res.status(400).json({ message: "Invalid Credentials" });
     }
@@ -75,7 +75,7 @@ router.post("/signin", async (req, res) => {
       }
 
       const authClaim = [
-        { name: existingUser.fullname },
+        { name: existingUser.email },
         { role: existingUser.role }
       ];
 

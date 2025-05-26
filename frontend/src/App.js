@@ -7,12 +7,17 @@ import {
     Route,
     Routes,
   } from "react-router-dom";
+ import Register from './component/Register';
  import Login from './component/Login';
+ import Hello from './component/Hello';
+ 
 function App() {
   return (
     <>
     <Routes>
-      <Route path="/" element={<Login/>}/>
+      <Route path="/" element={<Hello/>}/>
+      <Route path="/Register" element={<Register/>}/>
+      <Route path="/Login" element={<Login/>}/>
     </Routes>
     </>
   );
