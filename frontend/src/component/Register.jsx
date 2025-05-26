@@ -1,12 +1,15 @@
 
 
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Img from "../imgs/wallpaperFirst.jpg";
+import axios from "axios";
+import {useNavigate} from 'react-router-dom'
+
 import './Login.css';
 import { PiEyeLight, PiEyeSlash } from "react-icons/pi";
-
-
 const Register = () => {
+const navigate= useNavigate();
+
   const [role, setRole] = useState('student');
   const [Show, setShow] = useState(true);
   const handleShow = () => {
@@ -20,11 +23,38 @@ const [values,setValues]=useState({
     role:role,
     qualification:""
   })
-  console.log("fgfdg",values)
+  
+useEffect(()=>{
+  setValues(prev=>({...prev,role:role}))
+},[role])
   const change=(e)=>{
   const {name,value}=e.target;
   setValues({...values,[name]:value})
 }
+const submit = async () => {
+    console.log("click",values.role)
+    try {
+      if (
+        !values.fullname || 
+        !values.email || 
+        !values.password || 
+        !values.mobilenumber||!values.role|| (values.role === 'teacher' && !values.qualification)
+  )
+       {
+        alert("All fields are required");
+      } else {
+        const response =await axios.post(
+          "http://localhost:8000/signup",
+          values
+        )
+        navigate('/Login')
+          console.log(response.data); // Assuming `values` contains your form data
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  };
+  
   return (
     <div
       className="Login_main_class position-relative"
@@ -165,13 +195,14 @@ const [values,setValues]=useState({
                   <label htmlFor="qualification">Qualification</label>
                 </div>
               )}
-
-              <a href="#" type="submit">
+              <a href="#" type="submit" onClick={submit}>
                 <span></span>
                 <span></span>
                 <span></span>
                 <span></span>
+{/* <button style={{}} type="submit" onClick={submit}> */}
                 SignUp
+                {/* </button> */}
               </a>
                <p className="" style={{color: "rgba(219, 204, 204, 0.8)"}}>
               Have a account?{" "}

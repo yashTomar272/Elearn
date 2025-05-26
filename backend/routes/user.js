@@ -49,7 +49,7 @@ router.post("/signup", async (req, res) => {
       qualification: role === "teacher" ? qualification : undefined
     });
 
-    const savedUser = await newUser.save();
+    await newUser.save();
 
     return res.status(200).json({ message: "Registered Successfully" });
   } catch (err) {

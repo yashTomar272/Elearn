@@ -2,6 +2,7 @@ const jwt = require("jsonwebtoken");
 const KEY = process.env.KEY;
 
 if (!KEY) {
+  console.log(KEY,'dd')
   throw new Error("KEY is not defined in environment variables");
 }
 

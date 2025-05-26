@@ -4,15 +4,44 @@ import React, { useState } from 'react';
 import Img from "../imgs/wallpaperFirst.jpg";
 import './Login.css';
 import { PiEyeLight, PiEyeSlash } from "react-icons/pi";
-
-
+import { useNavigate } from 'react-router-dom';
+import axios from 'axios'
 const Login = () => {
-  const [role, setRole] = useState('student');
+  const navigate= useNavigate();
   const [Show, setShow] = useState(true);
   const handleShow = () => {
     setShow(!Show);
   };
+const change = (e) => {
+  const { name, value } = e.target;
+  setValues({ ...values, [name]: value });
+}
 
+const [values,setValues]=useState({
+    email:"",
+    password:"",
+  })
+const submit = async () => {
+    console.log("click",values)
+    try {
+      if (
+        !values.email || 
+        !values.password )
+       {
+        alert("All fields are required");
+      } else {
+        const response =await axios.post(
+          "http://localhost:8000/signin",
+          values
+        )
+        navigate('/')
+          console.log(response.data); // Assuming `values` contains your form data
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  };
+  
   return (
     <div
       className="Login_main_class position-relative"
@@ -65,13 +94,13 @@ const Login = () => {
           
             <form action="#">
               <div className="userInputBox">
-                <input type="text" id="eamil" required />
-                <label htmlFor="eamil">Enter Your Eamil</label>
+                <input type="text" id="email" name="email" required onChange={change} />
+                <label htmlFor="email">Enter Your Email</label>
               </div>
              
               <div className="userInputBox">
-                <input type={Show ? "password" : "text"}
-               id="password" required 
+                <input onChange={change} type={Show ? "password" : "text"}
+               id="password" name="password" required 
                 />
                 <label htmlFor="password">Enter Password</label>
                  {Show ? (
@@ -104,7 +133,7 @@ const Login = () => {
               )}
               </div>
               
-              <a href="#" type="submit">
+              <a href="#" type="submit" onClick={submit}>
                 <span></span>
                 <span></span>
                 <span></span>

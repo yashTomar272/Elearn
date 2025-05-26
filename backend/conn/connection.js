@@ -4,5 +4,5 @@ mongoose.connect(CONN_URL).then(()=>{
     console.log("database connecting successfully")
 })
 .catch((err)=>{
-    console.log("database not connecting ",)
+    console.log("database not connecting ",err)
 })
