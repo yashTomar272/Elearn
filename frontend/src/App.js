@@ -10,7 +10,7 @@ import {
  import Register from './component/Register';
  import Login from './component/Login';
  import Hello from './component/Hello';
-import TeacherDashboard from './teacherCompoments/TeacherDashboard';
+import TeacherRoutes from './TeacherRoutes';
  
 function App() {
   return (
@@ -19,7 +19,7 @@ function App() {
       <Route path="/" element={<Hello/>}/>
       <Route path="/Register" element={<Register/>}/>
       <Route path="/Login" element={<Login/>}/>
-      <Route path="/TeacherDashboard" element={<TeacherDashboard/>}/>
+     <Route path="/teacher/*" element={<TeacherRoutes />} />
     </Routes>
     </>
   );
