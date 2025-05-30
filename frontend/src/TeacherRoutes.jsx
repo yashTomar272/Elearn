@@ -7,6 +7,7 @@ import SeeTransaction from './teacherCompoments/SeeTransaction'
 import ProfileSetting from './teacherCompoments/ProfileSetting'
 import EditLecture from './teacherCompoments/EditLecture'
 import EditCourses from './teacherCompoments/EditCourses'
+import AddLecture from './teacherCompoments/AddLecture'
 
 // aur koi pages...
 
@@ -21,6 +22,7 @@ const TeacherRoutes = () => {
         <Route path="ProfileSetting" element={<ProfileSetting />} />
         <Route path="EditLecture" element={<EditLecture />} />
         <Route path="EditCourses" element={<EditCourses />} />
+        <Route path="AddLecture" element={<AddLecture />} />
 
         
      

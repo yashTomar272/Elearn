@@ -146,8 +146,24 @@ input[type="radio"]:checked + label {
   transition: all 0.3s ease;
   border: none;
 }
+.see_btnn {
+  font-weight: 400;
+  font-size: 14px;
+  height: 35px;
+  width: 120px;
+  border-radius: 8px;
+  background: rgba(8, 235, 122, 0.918);
+  color: white;
+  transition: all 0.3s ease;
+  border: none;
+}
 .see_btn:hover{
   color: rgba(54, 35, 221, 0.6);
   background-color: white;
   border: 1px solid rgba(54, 35, 221, 0.6);
+}
+.see_btnn:hover{
+  color: rgba(8, 235, 122, 0.918);
+  background-color: white;
+  border: 1px solid rgba(8, 235, 122, 0.918);
 }
