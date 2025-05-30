@@ -8,10 +8,10 @@ const TeacherDashboard = ({children}) => {
   return (
   <>
   <div style={{height:"100vh",width:"100%"}} className='d-flex'>
-    <div className='sideTeacher_dashboard' style={{height:"100vh",width:"280px"}}>
+    <div className='sideTeacher_dashboard' >
         <SideTeacher/>
     </div>
-    <div className='centerTeacher_dashboard' style={{flexGrow:"1"}}>
+    <div className='centerTeacher_dashboard w-100' style={{flexGrow:"1"}}>
       <NavTeacher/>
      <div className='main-container'>
           <Outlet />
