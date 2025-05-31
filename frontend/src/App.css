@@ -40,6 +40,7 @@
 /* web design */
 
 .DALJU{
+  /* color: rgb(179, 174, 174); */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -89,4 +90,64 @@ input[type="radio"]:checked + label {
   .li_icon{
     color: blue;
   }
+}
+.delet_Course_icon{
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 2;
+  color:red;
+  font-size: 35px;
+  cursor: pointer;
+   transition: all 0.3s ease;
+}
+.edit_Course_icon{
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 2;
+  color: rgb(6, 252, 39);
+  font-size: 34px;
+  cursor: pointer;
+  font-weight: 500;
+   transition: all 0.3s ease;
+}
+.delet_Course_iconn{
+  color:red;
+  font-size: 25px;
+  cursor: pointer;
+   transition: all 0.3s ease;
+}
+.edit_Course_iconn{
+  color: rgb(6, 252, 39);
+  font-size: 25px;
+  cursor: pointer;
+  font-weight: 500;
+   transition: all 0.3s ease;
+}
+.delet_Course_icon:hover{
+  color: rgb(255, 149, 131);
+}
+.edit_Course_icon:hover{
+  color: greenyellow
+ 
+}
+.CL{
+  color: rgba(54, 35, 221, 0.6);
+}
+.see_btn {
+  font-weight: 400;
+  font-size: 14px;
+  height: 35px;
+  width: 120px;
+  border-radius: 8px;
+  background: rgba(54, 35, 221, 0.6);
+  color: white;
+  transition: all 0.3s ease;
+  border: none;
+}
+.see_btn:hover{
+  color: rgba(54, 35, 221, 0.6);
+  background-color: white;
+  border: 1px solid rgba(54, 35, 221, 0.6);
 }
