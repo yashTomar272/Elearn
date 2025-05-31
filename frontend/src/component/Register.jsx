@@ -52,7 +52,6 @@ const submit = async () => {
       }
     } catch (error) {
       alert(error?.response?.data?.message)
-
       console.log("Error message from backend:",error?.response?.data?.message);
     }
   };
