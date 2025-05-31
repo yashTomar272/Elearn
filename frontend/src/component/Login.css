@@ -14,10 +14,7 @@ For button box shadow: 0 0 5px #f403af,
     box-sizing: border-box;
     font-family: sans-serif;
 }
-body{
-    height: 100vh;
-    background: linear-gradient(#872525, #243b55);
-}
+
 
 .loginBox{
     position: absolute;

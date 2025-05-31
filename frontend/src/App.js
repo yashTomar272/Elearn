@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+
 import './App.css';
 import "bootstrap/dist/css/bootstrap.css";
  import "bootstrap/dist/js/bootstrap.bundle.js";
@@ -10,6 +10,7 @@ import {
  import Register from './component/Register';
  import Login from './component/Login';
  import Hello from './component/Hello';
+import TeacherDashboard from './teacherCompoments/TeacherDashboard';
  
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
       <Route path="/" element={<Hello/>}/>
       <Route path="/Register" element={<Register/>}/>
       <Route path="/Login" element={<Login/>}/>
+      <Route path="/TeacherDashboard" element={<TeacherDashboard/>}/>
     </Routes>
     </>
   );
