@@ -1,4 +1,4 @@
-import {XAxis,CartesianGrid,Tooltip,BarChart,Legend,Bar,PieChart,Pie,LineChart,YAxis,Line} from 'recharts'
+import {XAxis,ResponsiveContainer,CartesianGrid,Tooltip,BarChart,Legend,Bar,PieChart,Pie,LineChart,YAxis,Line} from 'recharts'
 export default function AnalyticI(){
   const data = [
     {
@@ -53,6 +53,7 @@ export default function AnalyticI(){
         <Bar dataKey="Student" fill="#00464e" />
         <Bar dataKey="Earnings" fill="#810551" />
       </BarChart>
+    
 <div className='d-flex'>
   <span className="Student" style={{color:"#00464e"}}>Student/</span>
       <span className="Earnings" style={{color:"#810551"}}>Earnings</span>
