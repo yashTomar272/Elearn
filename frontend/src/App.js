@@ -3,7 +3,7 @@ import './App.css';
 import "bootstrap/dist/css/bootstrap.css";
  import "bootstrap/dist/js/bootstrap.bundle.js";
 import {
-    BrowserRouter as Router,
+    // BrowserRouter as Router,
     Route,
     Routes,
   } from "react-router-dom";

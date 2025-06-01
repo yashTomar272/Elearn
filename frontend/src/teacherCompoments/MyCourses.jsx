@@ -11,8 +11,8 @@ const MyCourses = () => {
     <>
     <div className='h-100 w-100 p-3'>
 <h3 style={{fontWeight:"500",fontSize:"25px"}} className='text-center fw-bold'>My Courses</h3>
-<div className='d-flex flex-row justify-content-between mt-3'>
-    <div style={{height:"320px",width:"280px",boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.2)",borderRadius:"9px"}} className=' d-flex flex-column position-relative '>
+<div className='row gap-3 d-flex align-items-center justify-content-evenly'>
+    <div style={{height:"320px",maxWidth:"290px",minWidth:"280px",boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.2)",borderRadius:"9px"}} className=' d-flex flex-column col position-relative '>
         <MdDeleteOutline className='delet_Course_icon'/>
         <BiEditAlt className='edit_Course_icon' onClick={()=>navigate("/teacher/EditLecture")}/>
 <img src={photo} alt='Courses_img' style={{height:"50%",width:"100%",borderRadius:"9px 9px 0 "}}/>
@@ -30,7 +30,7 @@ const MyCourses = () => {
 </div>
     </div>
 
-<div style={{height:"320px",width:"280px",boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.2)",borderRadius:"9px"}} className=' d-flex flex-column position-relative '>
+<div style={{height:"320px",maxWidth:"290px",minWidth:"280px",boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.2)",borderRadius:"9px"}} className=' d-flex flex-column col position-relative '>
         <MdDeleteOutline className='delet_Course_icon'/>
         <BiEditAlt className='edit_Course_icon' onClick={()=>navigate("/teacher/EditLecture")}/>
 <img src={photo} alt='Courses_img' style={{height:"50%",width:"100%",borderRadius:"9px 9px 0 "}}/>
@@ -49,7 +49,7 @@ const MyCourses = () => {
     </div>
 
 
-    <div style={{height:"320px",width:"280px",boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.2)",borderRadius:"9px"}} className=' d-flex flex-column position-relative '>
+    <div style={{height:"320px",maxWidth:"290px",minWidth:"280px",boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.2)",borderRadius:"9px"}} className=' d-flex flex-column col position-relative '>
         <MdDeleteOutline className='delet_Course_icon'/>
         <BiEditAlt className='edit_Course_icon' onClick={()=>navigate("/teacher/EditLecture")}/>
 <img src={photo} alt='Courses_img' style={{height:"50%",width:"100%",borderRadius:"9px 9px 0 "}}/>

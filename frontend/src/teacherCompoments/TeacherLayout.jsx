@@ -1,6 +1,6 @@
-import React from 'react'
+// import React from 'react'
 import SideTeacher from './SideTeacher'
-import CenterTeacher from './CenterTeacher'
+// import CenterTeacher from './CenterTeacher'
 import NavTeacher from './NavTeacher'
 import { Outlet } from 'react-router-dom'
 

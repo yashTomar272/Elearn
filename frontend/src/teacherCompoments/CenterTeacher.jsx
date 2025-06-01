@@ -157,7 +157,7 @@ const CenterTeacher = () => {
                     </div>
                 </div>
                 {/* chart of student */}
-                <div className="d-flex flex flex-md-row p-3 gap-4 gap-md-0 flex-column align-items-center justify-content-around mt-5">
+                <div className=" d-flex flex flex-md-row p-3 gap-4 gap-md-0 flex-column align-items-center justify-content-around mt-5" >
                     <div
                         style={{
                             borderRadius: "9px",
