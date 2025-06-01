@@ -30,7 +30,7 @@ const MyCourses = () => {
 </div>
     </div>
 
-<div style={{height:"320px",maxWidth:"290px",minWidth:"280px",boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.2)",borderRadius:"9px"}} className=' d-flex flex-column col position-relative '>
+<div style={{height:"350px",maxWidth:"290px",minWidth:"280px",boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.2)",borderRadius:"9px"}} className=' d-flex flex-column col position-relative '>
         <MdDeleteOutline className='delet_Course_icon'/>
         <BiEditAlt className='edit_Course_icon' onClick={()=>navigate("/teacher/EditLecture")}/>
 <img src={photo} alt='Courses_img' style={{height:"50%",width:"100%",borderRadius:"9px 9px 0 "}}/>
@@ -49,7 +49,7 @@ const MyCourses = () => {
     </div>
 
 
-    <div style={{height:"320px",maxWidth:"290px",minWidth:"280px",boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.2)",borderRadius:"9px"}} className=' d-flex flex-column col position-relative '>
+    <div style={{height:"350px",maxWidth:"290px",minWidth:"280px",boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.2)",borderRadius:"9px"}} className=' d-flex flex-column col position-relative '>
         <MdDeleteOutline className='delet_Course_icon'/>
         <BiEditAlt className='edit_Course_icon' onClick={()=>navigate("/teacher/EditCourses")}/>
 <img src={photo} alt='Courses_img' style={{height:"43%",width:"100%",borderRadius:"9px 9px 0 "}}/>
@@ -71,7 +71,7 @@ const MyCourses = () => {
     </div> 
 
 
-    <div style={{height:"380px",width:"280px",boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.2)",borderRadius:"9px"}} className=' d-flex flex-column position-relative '>
+    <div style={{height:"350px",maxWidth:"290px",minWidth:"280px",boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.2)",borderRadius:"9px"}} className=' d-flex flex-column position-relative '>
         <MdDeleteOutline className='delet_Course_icon'/>
         <BiEditAlt className='edit_Course_icon' onClick={()=>navigate("/teacher/EditCourses")}/>
 <img src={photo} alt='Courses_img' style={{height:"43%",width:"100%",borderRadius:"9px 9px 0 "}}/>
@@ -93,7 +93,7 @@ const MyCourses = () => {
 
 
     </div>    
-    <div style={{height:"360px",width:"280px",boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.2)",borderRadius:"9px"}} className=' d-flex flex-column position-relative '>
+    <div style={{height:"350px",maxWidth:"290px",minWidth:"280px",boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.2)",borderRadius:"9px"}} className=' d-flex flex-column position-relative '>
         <MdDeleteOutline className='delet_Course_icon'/>
         <BiEditAlt className='edit_Course_icon' onClick={()=>navigate("/teacher/EditCourses")}/>
 <img src={photo} alt='Courses_img' style={{height:"43%",width:"100%",borderRadius:"9px 9px 0 "}}/>

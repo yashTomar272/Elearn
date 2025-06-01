@@ -4,9 +4,7 @@ import { TiArrowSortedDown } from "react-icons/ti";
 import { TiArrowSortedUp } from "react-icons/ti";
 import photo from "../imgs/photo.jpg"
 import React, { useState } from 'react'
-
 const NavTeacher = () => {
-
      const [Show, setShow] = useState(true);
       const handleShow = () => {
         setShow(!Show);
