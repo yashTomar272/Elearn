@@ -28,6 +28,7 @@ For button box shadow: 0 0 5px #f403af,
     padding: 10px 40px 10px 40px;
 }
 
+
 .loginBox h2{
     text-align: center;
     color: #fff;
@@ -65,9 +66,9 @@ For button box shadow: 0 0 5px #f403af,
 
 .userInputBox input:focus ~ label,
 .userInputBox input:valid ~ label{
-    top: -20px;
+    top: -12px;
     font-size: 12px;
-    color: #dfdeb5;
+    color: #6d6d69;
 }
 
 .loginBox a{
