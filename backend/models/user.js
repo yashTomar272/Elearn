@@ -24,7 +24,11 @@ const userSchema = new mongoose.Schema({
   qualification: { // only for teachers
     type: String,
     default: null
-  }
+  },
+   myCourses: [{    // 👈 added this
+    type: mongoose.Types.ObjectId,
+    ref: "courses"
+  }]
 }, { timestamps: true });
 
 module.exports = mongoose.model("user", userSchema);

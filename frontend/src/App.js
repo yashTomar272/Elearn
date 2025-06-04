@@ -11,10 +11,14 @@ import {
  import Login from './component/Login';
  import Hello from './component/Hello';
 import TeacherRoutes from './TeacherRoutes';
+import { ToastContainer } from "react-toastify";
+
+import "react-toastify/dist/ReactToastify.css";
  
 function App() {
   return (
     <>
+     <ToastContainer position="top-right" autoClose={2000} />
     <Routes>
       <Route path="/" element={<Hello/>}/>
       <Route path="/Register" element={<Register/>}/>

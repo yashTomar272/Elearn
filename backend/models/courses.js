@@ -1,34 +1,54 @@
-const mongoose=require("mongoose");
+const mongoose = require("mongoose");
 
-const course=new mongoose.Schema({
-     thumbnail:{
-        type:String,
-        required:true
+const courseSchema = new mongoose.Schema({
+    thumbnail: {
+        type: String,
+        required: true
     },
-     language:{
-         type:String,
-        default:"english",
-        enum:["english","hindi"]
+    language: {
+        type: String,
+        default: "english",
+        enum: ["english", "hindi"]
     },
-     subject:{
-        type:String,
-        required:true
+    type: {
+        type: String,
+        default: "paid",
+        enum: ["paid", "free"]
     },
-     title:{
-        type:String,
-        required:true
+    subject: {
+        type: String,
+        required: true
     },
-     valid:{
-        type:String,
-        required:true
+    title: {
+        type: String,
+        required: true
     },
-     lesson:{
-        type:String,
-        required:true
+    valid: {
+        type: String,
+        required: true
     },
-     teachername:{
-        type:String,
-        required:true
+    lecture: {
+        type: String,
+        required: true
+    },
+    teachername: {
+        type: String,
+        required: true
+    },
+
+    // ✅ New Field for Lessons
+lessons: [
+  {
+    lessonName: {
+      type: String,
+      required: true
+    },
+    url: {
+      type: String,
+      required: true
     }
-},{timestamps:true})
-module.exports=mongoose.model("courses",course)
+  }
+]
+}, { timestamps: true });
+
+module.exports = mongoose.model("courses", courseSchema);

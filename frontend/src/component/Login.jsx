@@ -5,8 +5,12 @@ import Img from "../imgs/wallpaperFirst.jpg";
 import './Login.css';
 import { PiEyeLight, PiEyeSlash } from "react-icons/pi";
 import { useNavigate } from 'react-router-dom';
+import {authActions} from "../store/auth"
+import { useDispatch } from "react-redux";
 import axios from 'axios'
+
 const Login = () => {
+  const dispatch=useDispatch();
   const navigate= useNavigate();
   const [Show, setShow] = useState(true);
   const handleShow = () => {
@@ -33,8 +37,16 @@ const submit = async () => {
         const response =await axios.post(
           "http://localhost:8000/signin",
           values
-        )
-        navigate('/')
+        );
+        console.log("response",response.data)
+        dispatch(authActions.login());
+    dispatch(authActions.changeRole(response.data.role));
+localStorage.setItem("id",response.data.id)
+localStorage.setItem("token",response.data.token)
+localStorage.setItem("role",response.data.role)
+localStorage.setItem("fullname",response.data.fullname)
+console.log("hello",response.data.fullname)
+        navigate('/teacher')
           console.log(response.data); // Assuming `values` contains your form data
       }
     } catch (error) {

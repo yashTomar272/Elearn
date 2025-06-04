@@ -8,6 +8,8 @@ import ProfileSetting from './teacherCompoments/ProfileSetting'
 import EditLecture from './teacherCompoments/EditLecture'
 import EditCourses from './teacherCompoments/EditCourses'
 import AddLecture from './teacherCompoments/AddLecture'
+import AddCourse from './teacherCompoments/AddCourse'
+import InfoCourses from './teacherCompoments/InfoCourses'
 
 // aur koi pages...
 
@@ -16,13 +18,15 @@ const TeacherRoutes = () => {
     <Routes>
       <Route path="/" element={<TeacherLayout />}>
         <Route path="" element={<CenterTeacher />} />
-        <Route path="MyCourses" element={<MyCourses />} />
-        <Route path="SeeLecture" element={<SeeLecture />} />
-        <Route path="SeeTransaction" element={<SeeTransaction />} />
-        <Route path="ProfileSetting" element={<ProfileSetting />} />
-        <Route path="EditLecture" element={<EditLecture />} />
-        <Route path="EditCourses" element={<EditCourses />} />
-        <Route path="AddLecture" element={<AddLecture />} />
+        <Route path="/MyCourses" element={<MyCourses />} />
+        <Route path="/SeeLecture/:id" element={<SeeLecture />} />
+        <Route path="/SeeTransaction" element={<SeeTransaction />} />
+        <Route path="/ProfileSetting" element={<ProfileSetting />} />
+        <Route path="/EditLecture/:courseId/:lessonId" element={<EditLecture />} />
+        <Route path="/EditCourses/:id" element={<EditCourses />} />
+        <Route path="/AddLecture/:id" element={<AddLecture />} />
+        <Route path="/InfoCourses/:id" element={<InfoCourses />} />
+        <Route path="/AddCourse" element={<AddCourse />} />
 
         
      
